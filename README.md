@@ -4,8 +4,8 @@ This function implements a Newton-Krylov solver to find the root of a function.
 
 The basic idea is to compute the inverse of the Jacobian with an iterative Krylov method. These methods require only evaluating the Jacobian-vector products, which are conveniently approximated by a finite difference:
 
-Jv≈(f(x+ω∗v/|v|)−f(x))/ω
-Jv≈(f(x+ω∗v/|v|)−f(x))/ω
+Jv ≈ (f(x + ω ∗ v/|v|) − f(x)) / ω
+
 Due to the use of iterative matrix inverses, these methods can deal with large nonlinear problems.
 
 LGMRES (a variant of restarted GMRES iteration) reuses some of the information obtained in the previous Newton steps to invert Jacobians in subsequent steps.
